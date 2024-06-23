@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Hello World' })   
+    res.status(200).json({ message: 'welcome to my api' })   
 })
 
 app.use('/api', protect, router)
