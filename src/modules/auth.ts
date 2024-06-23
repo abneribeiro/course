@@ -1,12 +1,12 @@
 import jwt from "jsonwebtoken";
-import bycrpt from "bcrypt";
+import bcrypt from "bcrypt";
 
-const comparePassword = async (password, hash) => {
-   bycrpt.compare(password, hash);
+export const comparePassword = async (password, hash) => {
+  bcrypt.compare(password, hash);
 }
 
-const hashPassword = async (password) => {
-  bycrpt.hash(password, 10);
+export const hashPassword = async (password: string ) => {
+  bcrypt.hash(password, 10);
 }
 
 export const createJWT = (user) => {
